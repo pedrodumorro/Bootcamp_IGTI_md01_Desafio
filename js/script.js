@@ -34,12 +34,7 @@ const fetchUsers = async () => {
 const searchedTerm = (e) => {
   usersFiltered = []
 
-  if (searchInput.value !== '') {
-    searchBtn.disabled = false
-  }
-  else {
-    searchBtn.disabled = true
-  }
+  searchInput.value.trim() !== '' ? searchBtn.disabled = false : searchBtn.disabled = true
 
   if (e.key === 'Enter' || e.type === 'click') {
     termSearched = searchInput.value
@@ -118,7 +113,7 @@ const renderStatistics = () => {
   }
 
   const averageAges = () => {
-    avgAges = (totalAges / (female + male)).toFixed(2)
+    avgAges = (totalAges / (female + male)).toFixed(2).replace('.', ',')
     const avgAgesHTML = `<p>Média das idades: <strong>${avgAges}</strong></p>`
     statistics.innerHTML += avgAgesHTML
   }
