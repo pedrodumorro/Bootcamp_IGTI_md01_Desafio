@@ -33,7 +33,7 @@ input[type=text]{
 }
 
 input[type=text]:focus{
-  background-color: rgba(172, 253, 97, 0.192);
+  background-color: rgb(230, 250, 255);
 }
 
 button{
@@ -48,9 +48,9 @@ button{
 }
 
 button:disabled{
-  background-color: rgb(243, 231, 231);
-  color: rgb(255, 255, 255);
-  border: rgb(243, 231, 231);
+  background-color: rgb(128, 128, 128);
+  color: rgb(78, 78, 78);
+  border: rgb(128, 128, 128);
 }
 
 #panels{
