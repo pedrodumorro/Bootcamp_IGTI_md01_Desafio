@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
   usersList = document.querySelector('#usersList')
   statistics = document.querySelector('#searchStatistics')
 
+  searchInput.focus()
   fetchUsers()
 })
 
@@ -71,6 +72,11 @@ const render = () => {
 
 const renderList = () => {
   let usersHTML = "<ul>"
+  let header = `
+  <div class='header'>
+  <h2>${usersFiltered.length} usuário(s) encontrado(s)</h2>
+  </div>
+  `
   usersFiltered.forEach(user => {
     let userHTML =
       `
@@ -82,7 +88,8 @@ const renderList = () => {
     `
     usersHTML += userHTML
   })
-  usersList.innerHTML = usersHTML
+  usersList.innerHTML = header
+  usersList.innerHTML += usersHTML
 }
 
 const renderStatistics = () => {
@@ -92,13 +99,17 @@ const renderStatistics = () => {
     female = usersFiltered.filter(user => user.gender === 'female').length
     const genderHTML =
       `
-    <p>Sexo Masculino: <strong>${male}</strong></p>
-    <p>Sexo Feminino: <strong>${female}</strong></p>
-    `
+      <div class='header'>
+      <h2>Estatísticas</h2>
+      </div>
+      <p>Sexo Masculino: <strong>${male}</strong></p>
+      <p>Sexo Feminino: <strong>${female}</strong></p>
+      `
     statistics.innerHTML += genderHTML
   }
 
   const sumTotalAges = () => {
+    totalAges = 0
     usersFiltered.map(user => {
       totalAges += +(user.age)
     })

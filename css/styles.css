@@ -32,13 +32,17 @@ input[type=text]{
   border-radius: 5px;
 }
 
+input[type=text]:focus{
+  background-color: rgba(172, 253, 97, 0.192);
+}
+
 button{
   width: 7%;
   margin: 0 2px;
   box-sizing: border-box;
   font-size: 16px;
-  background-color: rgb(185, 218, 155);
-  border: rgb(180, 218, 140) solid 3px;
+  background-color: rgba(172, 253, 97, 0.192);
+  border: rgb(0, 0, 0) solid 2px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 5px;
 }
@@ -60,15 +64,15 @@ button:disabled{
   width: 70%;
   background-color: rgb(239, 243, 222);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: 5px;
   box-sizing: border-box;
 }
 
 #searchStatistics{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 220px;
+  height: 320px;
   width: 30%;
   min-width: 200px;
   background-color: rgb(66, 45, 255);
@@ -83,6 +87,7 @@ button:disabled{
   align-items: center;
   box-sizing: border-box;
   font-size: 18px;
+  padding: 8px;
 }
 
 .picture > img {
@@ -93,4 +98,8 @@ box-sizing: border-box;
 
 .name {
 padding: 0 5px;
+}
+
+.header{
+  align-self: center;
 }
