@@ -1,0 +1,96 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+input[type=text]{
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+button{
+  width: 7%;
+  margin: 0 2px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: rgb(185, 218, 155);
+  border: rgb(180, 218, 140) solid 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+}
+
+button:disabled{
+  background-color: rgb(243, 231, 231);
+  color: rgb(255, 255, 255);
+  border: rgb(243, 231, 231);
+}
+
+#panels{
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#usersList{
+  width: 70%;
+  background-color: rgb(239, 243, 222);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#searchStatistics{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 220px;
+  width: 30%;
+  min-width: 200px;
+  background-color: rgb(66, 45, 255);
+  padding: 5px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.picture > img {
+border-radius: 50%;
+margin: 0 20px 0 0;
+box-sizing: border-box;
+}
+
+.name {
+padding: 0 5px;
+}
